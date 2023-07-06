@@ -1,0 +1,146 @@
+bios basic input output system
+
+basic -> go advance
+
+Literal -> literaly print ~~~ -> why literal
+
+str only concatenate str
+
+loop, signed bit go reverse
+
+devices not infinite
+
+concatenate (concat) : stick together
+
+machine code vs bytecode
+
+fundametaly
+
+all programs 1 and 0
+
+machine code -> compiled 0 and 1 -> computer understanding 0 1 -> make binary code
+
+pythone, java use bytecode -> very similar machine code -> but learns in VM -> 
+
+
+powershell -> how many people connect to the internet
+
+
+a,b : floppy disk
+cd rom -> d(accesery)
+
+
+filesystem(folder, directory)
+bunch
+
+
+Floor division is useful to integer math
+
+ceilling function?
+
+same()level -> left to right
+
+computer engineering | science
+eng : hardware
+
+all of the arithmetic operator first
+
+= Assignment operator
+
+
+escape charcter \ (back slash)
+
+\t usally 4 spaces
+
+
+
+---------------------------------------------------------
+
+def main():
+    print("  \\/")
+    print(" \\\\//")
+    print("\\\\\\///")
+    print("///\\\\\\")
+    print(" //\\\\")
+    print("  /\\")
+    
+main()
+
+--------------------------------------------
+
+def main():
+    print("  \\/")
+    print(" \\\\//")
+    print("\\\\\\///")
+    print("///\\\\\\")
+    print(" //\\\\")
+    print("  /\\")
+    
+main()
+
+-----------------------------------------------
+
+3 + 1 - 5
+11 * 11 / 6 + 10/2.5(4)
+
+----------------------------------------------
+
+1 // 2 > 0 or 4 == 9 % 5 or 1 + 1 < 1 - 1
+0 > 0 or 4 == 4 or 2 < 0
+false or true or false
+true or false
+true
+
+-----------------------------------------------
+
+   /\       /\
+  /  \     /  \
+ /    \   /    \
++------+ +------+
+|      | |      |
+|      | |      |
++------+ +------+
+|United| |United|
+|States| |States|
++------+ +------+
+|      | |      |
+|      | |      |
++------+ +------+
+   /\       /\
+  /  \     /  \
+ /    \   /    \
+
+->
+
+def main():
+    head(2)
+    body(2)
+    unitedStates(2)
+    body(2)
+    tail(2)
+    
+    
+def head(count):
+    print("   /\\    " * count);
+    print("  /  \\   " * count);
+    print(" /    \\  " * count);
+    
+    
+def body(count):
+    print("+------+ " * count);
+    print("|      | " * count);
+    print("|      | " * count);
+    print("+------+ " * count);
+    
+def unitedStates(count):
+    print("|United| " * count)
+    print("|States| " * count)
+
+def tail(count):
+    print("   /\\    " * count)
+    print("  /  \\   " * count)
+    print(" /    \\  " * count)
+    
+    
+main()
+
