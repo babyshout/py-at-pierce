@@ -1,0 +1,280 @@
+function start today
+
+
+
+interpreter versus compiler :
+
+compiler : taking some code(human can read) -> translate to something com can read
+
+individual pxs have own value, 1920*1080 -> 2,000,000~~ pxs his phone /// rgb 0 ~ 255 2mil times memory required in memory
+
+in binary 0 ~ 1 milions 0 ~ 1 human wanna write this color need years
+
+differences between compiler and interpreter -> when it happens
+
+intel cpu, amd cpu -> programmer, developer
+
+
+interpreted lang -> in that moment
+
+it still compiled but it happens read one line, run, show
+
+
+both cases bytecode and machine code generated
+
+
+
+ls : list everything
+
+
+javac functions.java -> make .class
+
+python functions.py -> make machinecode ->
+
+
+~ : call "tilld"
+
+cd : change dir
+
+
+should right command
+
+# : pound
+
+you can write anywhere
+
+
+lot of repeatition
+
+
+you can write functions to remove it
+
+def : define
+
+input the prameter in the functions ~~
+
+
+how python know its function's expressions is indentations with hitting the tap (4 spaces)
+
+
+
+if i did do that
+
+it makes code more readable
+
+and only change only one place (it effect everywhere where called)
+or you chanege everywhere (when you need to change)
+
+code reusablity
+
+
+arlam -> 
+more example -> dollars to one -> if i have function there is functions
+bunch of other functions, sin, cosin, tangent
+
+
+useally many programmer's tap is 4 spaces
+
+in java curly braces to make block (c++ also uses def)
+
+
+every single keyboard number has own number
+
+need to expression more lang -> use unicode
+
+
+~~~ ascii art
+
+
+
+whie python is so popular ? it many library bunch of soft, ~~ things to use
+
+we use import statement
+
+
+ceil : ceiling
+
+.999999999999999999 : equla to 1 but computer is not infinite
+
+
+same seed but different result -> if you give same valuables it will be same
+
+
+
+if you want stepside you need 3 parameters
+
+
+
+
+condition is like coices
+
+if the time equal to 6 a.m. turn on alram
+
+
+
+input() : get string what else when you input "enter"
+
+what ever you get in -> 
+
+
+
+Tcl/Tk(window management system) (tkinter)
+
+
+* : wild card (everything)
+
+
+redunted means repeated
+
+
+
+all program should have main function
+
+"
+def main():
+    statements
+
+main()
+
+
+
+---------------------------------------
+functions.py
+
+# print("hello")
+# Phillip Fokner
+# July 6, 2023
+# This program writes the word
+# MISSISSIPI
+
+# import the math package
+import math
+
+print(math.sqrt(2))
+print(math.sin(1))
+
+# import the random pack
+import random
+
+# print a pseudo-random (means fake) number between 0 and 1
+# 0 is included and 1 is excluded
+# i.e. 0.00000000000 -- 0.99999999999
+print(random.random())
+
+
+# define a function called printS()
+# use indentation
+def printS() :
+    print(" SSSS")
+    print("SS   ")
+    print("  SSS")
+print("SSSS")
+
+def printI() :
+
+  print('IIIII')
+  print("  I  ")
+  print("  I  ")
+  print("IIIII")
+
+
+print('M   M')
+print("M M M")
+print("M   M")
+print()
+
+print()
+
+print()
+printS()
+print()
+
+
+print()
+printS()
+print()
+
+print()
+printI()
+print()
+
+
+print()
+printS()
+print()
+
+
+print()
+printS()
+print()
+
+print()
+printI()
+print()
+
+print("PPPP ")
+print("P   P")
+print("PPP")
+print("P")
+print()
+
+print()
+printI()
+print()
+
+------------------------------------------------------
+loops.py
+
+# for loop
+# i is a variable (identifier)
+# range(n) returns a list of numbers from 0 to n
+# 0 is included, n is not
+
+# for each i in range(10) -> print i
+for i in range(10) :
+    print(i)
+
+
+for i in (1, .. 10) :
+    print(i)
+
+-----------------------------------------------------------
+IFstatements.py
+
+if (True) :
+    # this only happens if the stuff in () is true
+    print('It is true')
+
+if (False) :
+    # this only happens if the stuff in () is true
+    print('It is false')
+
+number = 2
+if (number % 2 == 0) :
+    print(number, ' is even')
+
+if (number % 2 != 0) :
+    print(number, ' is odd')
+
+---------------------------------------------------------
+userInput.py
+
+name = input('What is your name? ')
+print('Hello, ', name)
+
+----------------------------------------------------------
+playingWithDrawing.py
+# has some issues
+
+# import everything from DrawingPanel
+from DrawingPanel import *
+
+from tkinter import *
+from tkinter import ttk
+
+# create a panel of width 100 and height 100
+panel = DrawingPanel(100, 100)
+
+
+# draw a line from (x1, y1) to (x2, y2)
+panel.draw_line(0, 0, 50, 50)
