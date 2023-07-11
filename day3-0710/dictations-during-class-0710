@@ -1,0 +1,251 @@
+as the book(how build your python program?)
+
+says that "make main function" -> python is oop lan
+
+
+computer get everything very literaly
+
+
+each of this print function makes diffrent line
+
+print function include "," -> concat that with space
+
+
+
+hard coding is very bed idea -> prof wanna know CSBS care it
+
+
+we never using hardcoding with numbers
+
+
+
+python doesn't like empty functions -> so that makes error
+
+
+
+list -> just scare bracket
+
+"list = []"
+
+list(list\identifier) =(assinged) []
+
+
+range function returns a list -> 
+
+
+Each element of a list has an index -> list[indexNum] -> get item from list where indexNum
+
+
+where availablie to write -> find location -> install each items in there -> list is continuous chunk of memory -> it is very fast
+
+i also have bhunch of variables -> each of this vars is in different memory
+
+list is very slow to change it (insert, remove -> need sort)
+
+linked list is very slow to access
+
+
+#1 different list in python : can input different type
+
+#note: non-homogeneous -> doesn't need to all same
+
+
+
+
+represent each x,y cordinate is list(x, y)
+
+
+------------------
+A = [0, 0]
+B = [1, 1]
+C = [2, 0]
+-----------------
+
+list + list = concat of these lists
+
+
+numpy is super useful at data science and ???
+
+
+np.array returns array(actually list)
+
+in any lan last index dosen't called
+
+
+in machine learning -> they are called by ex cordinate????? i didn't hear that
+
+figure the axis?
+
+
+plt is alias
+
+
+numpy.zeros
+
+fig, ax = plt.subplots()
+ax.scatter(x, y, s=1)
+plt.show()
+
+
+
+
+every finetree difference -> diff temp, water ~~~ -> make diffrence tree
+
+Human begings are diffrences
+
+
+Spider can't make web in 0-g -> some days later spider learn how to make a web (it hasn't intelligence like that)
+
+spider web is easy -> right and turn, right and turn...
+
+GPT, ~~~~ are very simple(stupid) -> just learning mils mils mils time
+
+
+
+
+we have learned many important things
+probably array is important things
+
+numpy, matplotlib
+
+for loop
+
+pick a random number is very simple
+
+you can do pentadom, sqaures
+
+next of this we are doing 1D go game
+
+we are skipped while loop things maybe
+
+
+
+CSBS problem solving
+--------------------------
+recipt
+def main():
+    subtotal = 38 + 40 + 30
+    print("Subtotal:")
+    print(subtotal)
+
+    tax = subtotal * .08
+    print("Tax:")
+    print(tax)
+
+    tip = subtotal * .15
+    print("Tip:")
+    print(tip)
+
+    print("Total:")
+    print(subtotal + tax + tip)
+
+----------
+rowString = ''         # create an empty string
+for row in range(10) :
+  rowString = str(row) + ": "
+  for col in range(10,20) :
+    rowString += str(col) + " "
+  print(rowString)
+  rowString = ''        # reset the the row
+
+---------------------------
+rowString = ''         # create an empty string
+for row in range(10) :
+  rowString = str(row) + ": "
+  for col in range(row) :
+    rowString += str(col) + " "
+  print(rowString)
+  rowString = ''        # reset the the row
+---------------
+# nested loops (a loop inside another loop)
+for y in range(3) :
+  for x in range(3, 6) :
+    print(y, x)
+--------------
+for row in range(10) :
+  for col in range(row) :
+    print(col, end = " ")
+  print()
+-------------------------------------------
+
+
+
+
+
+ChaosGame
+--------------------
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+A = np.array([0, 0])
+B = np.array([1, 1])
+C = np.array([2, 0])
+
+
+def midpoint(P1, P2) :
+  return (P1 + P2)/2
+
+
+numOfPoints = 1000000
+
+
+currentPoint = np.array([2, 1])
+listOfPoints = np.zeros([numOfPoints, 2])
+#listOfPoints[0] = currentPoint
+print(listOfPoints)
+
+
+for i in range(numOfPoints) :
+  num = int(random.random()*3)
+  if num == 0 :
+    newPoint = midpoint(currentPoint, A)
+  elif num == 1 :
+    newPoint = midpoint(currentPoint, B)
+  else :
+    newPoint = midpoint(currentPoint, C)
+  listOfPoints[i] = newPoint
+  currentPoint = newPoint
+
+
+#print(listOfPoints)
+x = listOfPoints[:,0]
+y = listOfPoints[:,1]
+fig, ax = plt.subplots()
+ax.scatter(x, y, s=1)
+plt.show()
+
+-------------------------------
+
+
+
+
+
+1-D-Go game
+--------------------
+board = []
+boardSize = 6
+for i in range(6)
+    board[i] = '.'
+
+def printBoard() :
+    boardString = ''
+    for i in board :
+        boardString += i
+    print(boardString)
+
+printBoard()
+
+move = input("Player X, what is your move? ")
+
+i = 0
+while i < 10 :
+  print(i)
+  i += 1
+---------------------
+
+
+while loop is indefinition loop
+
+for loop is definition loop (ex.for 10 times)
