@@ -1,0 +1,16 @@
+for each i(tem) in the rows list
+
+nested loop : inner loop (completes before the outer loop iterates), outer loop
+
+
+you will study caculous eventually
+calculous is all about sequence
+
+
+use curly braces to use(write) variables's name
+
+player = 'X'
+opponent = 'O'
+
+moves Available = True
+while movesAvailable
