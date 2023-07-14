@@ -1,0 +1,72 @@
+there is only tests today
+----------------------------------------------------------------
+Expressions
+
+print(1 + 2 * 3 - 4 * 20) #-13
+print(5 // 2 + 9.0 / 2.0 - 2 * 1.25) #4.0
+print(29 % 2 % 5 + 34 % 3) # 2
+print(8 + 6 * -2 + 4 + ( 2 + 5 ) > 5) #True
+print(31 // 2 / 10.0 + 10 / (5 / 2.0)) #5.5
+print(1 != 2) != (2 != 3) #False
+-----------------------------------------------------------
+Parameter Mystery
+
+def main():
+    a = "felt"
+    b = "saw"
+    c = "drew"
+    saw = "sue"
+    drew = "b"
+
+    mystery(a, b, c)
+    mystery(b, a, saw)
+    mystery(drew, c, saw)
+    mystery("a", saw, drew)
+    mystery(a, a, "drew")
+
+def mystery(b, a, c):
+    print(c + " " + a + " the " + b)
+
+main()
+--------------------------------------------------------------
+If/Else Simulation
+def mystery(x, y):
+    if (x > y):
+        x = x - 5
+        y = y + 5
+    if (x < y):
+        x += 1
+        y -= 1
+    else:
+        x = y * 2
+    print(str(x) + " " + str(y))
+
+mystery(4, 7) #5 6
+mystery(3, 3) #6 3
+mystery(10, 5) #6 9
+mystery(20, 4) #18 9
+mystery(1, 1) #2 1
+--------------------------------------------------------------
+
+def twoConsecutive(a, b, c):
+    a = abs(a)
+    b = abs(b)
+    c = abs(c)
+    return ((a - b == 1 or a - b == -1)
+            or (b - c == 1 or b - c == -1)
+            or (c - a == 1 or c - a == -1))
+
+
+print(twoConsecutive(1, 2, 12))
+print(twoConsecutive(1, 12, 2))
+print(twoConsecutive(2, 12, 1))
+print(twoConsecutive(4, 5, 3))
+print(twoConsecutive(2, 4, 6))
+print(twoConsecutive(8, 8, 8))
+-----------------------------------------------------------
+def printnumbers():
+    for i in range(1, 6):
+        print("." * (5 - i) + str(i) * i)
+
+printnumbers()
+--------------------------------------------------------------
