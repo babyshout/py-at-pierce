@@ -1,0 +1,6 @@
+what i did today:
+    complete the print_board()
+    complete the change player function
+    complete the move player's stone function
+
+    start the check player is win? function
