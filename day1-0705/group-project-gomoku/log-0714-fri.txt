@@ -1,0 +1,4 @@
+what i do today :
+    install pycharm, python
+start the project:
+    make main.py, print_board.py
