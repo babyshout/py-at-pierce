@@ -40,8 +40,8 @@ def main():
         is_valid_move = False
         while not is_valid_move:
             try:
-                move_x = int(input(f"player({player}), plz choose your move(x)")) - 1
-                move_y = int(input(f"player({player}), plz choose your move(y)")) - 1
+                move_y = int(input(f"player({player}), plz choose your move(x)")) - 1
+                move_x = int(input(f"player({player}), plz choose your move(y)")) - 1
 
                 if board[move_x][move_y] == player or board[move_x][move_y] == opponent:
                     is_valid_move = False
@@ -65,6 +65,36 @@ def main():
 
         # check the winning function start
         # function flow -> horizontal, vertical, 11 to 5, 1 to 7
+        is_win = False
+        directions = [(0, 1), (1, 0), (1, 1), (1, -1)]
+        for dr, dc in directions:
+            count = 1
+            r = move_x
+            c = move_y
+            while True:
+                r += dr
+                c += dc
+                if not (0 <= r < board_size and 0 <= c < board_size):
+                    break
+                if board[r][c] != player:
+                    break
+                count += 1
+            r = move_x
+            c = move_y
+            while True:
+                r -= dr
+                c -= dc
+                if not (0 <= r < board_size and 0 <= c < board_size):
+                    break
+                if board[r][c] != player:
+                    break
+                count += 1
+            if count == 5:
+                is_win = True
+
+        if is_win:
+            break
+            print(f"{player}, you win!")
 
         # if player(X or O) win, print winning comment and break the whole loop
 
