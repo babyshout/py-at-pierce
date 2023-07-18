@@ -1,0 +1,94 @@
+time : (speed) very elegant tons of annoying
+Calling the functions costs what?
+	Elegance e.g. sleve of Erathostheness
+	Towers of Hanoi
+	electrical power (need huge server farm -> need huge electricity)
+complexity last one is storage(memory)
+we have so much memory then you can't make it bigger?
+
+we make too big? -> laptop can't handle it
+super com : TB of memory
+
+memory, time, -> save time : use more memory
+save memory : use more time
+
+what is the functions costs? -> upper things
+
+emacs relaxation
+we can use jupyter notebook, pycharm, VScode
+
+2dimentional greed, loop through, like bluring algo??
+
+each individual color "single pixel" -> kind become same color????
+
+np.zeros() = create greed and make it 0
+
+relaxations equal to averaging
+
+70% of your time is debuging
+you will spent more time to debug
+
+boundary conditions, bunch of different of boundary condition???
+boundary condition is important
+
+it's almost like chaos game
+
+i don't wanna change 1 in center
+
+we also use matplotlit but 
+
+structured data or structure data?
+
+we once write, we can go back and read
+
+data point is seperate each ","(comma) CSV (comma seperated value)
+tab is very common
+
+open in w : file does not exist, create the file
+
+indentifier super useful. -> you can use it anywhere, change one place
+---------------------------------
+relaxation.py # mine
+import numpy as np
+
+rows = 10
+cols = 10
+grid = np.zeros([rows, cols])
+print(type(rows / 2))
+grid[rows // 2, cols // 2] = 1
+
+for steps in range(10):
+    for i in range(1, rows - 1):
+        for j in range(1, cols - 1):
+            if i != rows//2 or j != cols//2:  # !(i == rows and j == cols)
+                grid[i, j] = (grid[i, j + 1] + grid[i - 1, j] + grid[i, j - 1] + grid[i + 1, j]) / 4
+
+# .txt : text
+# .jpg : jpeg image file
+# .mpeg : ...
+# .csv : comma separated values
+# .txv? : tap separated values
+
+file = open("data.csv", "w")
+
+
+#print(grid)
+------------------------------------------------
+relaxation.py
+import numpy as np
+
+rows = 100
+cols = 200
+grid = np.zeros([rows, cols])
+print(type(rows/2))
+grid[rows//2, cols//2] = 1
+
+print(grid)
+for steps in range(32000):
+    for i in range(1, rows-1):
+        for j in range(1, cols-1):
+            if (i != rows//2 or j != cols//2): # !(i == rows and j == cols)
+                grid[i, j] = (grid[i, j+1] + grid[i-1, j] + grid[i, j-1] + grid[i+1, j])/4 
+
+print(grid)
+-------------------------------------
