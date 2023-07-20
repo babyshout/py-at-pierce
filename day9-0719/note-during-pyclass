@@ -1,0 +1,165 @@
+lego mc escher
+
+grading function
+1 : CSBS
+(no later then tomorrow) tomorrow late night, you should
+2 : group presentations
+
+We have group presentations tomorrow
+
+-----------------------
+Parameter Mystery
+def main():
+    a = "felt"
+    b = "saw"
+    c = "drew"
+    saw = "sue"
+    drew = "b"
+
+    mystery(a, b, c)
+    mystery(b, a, saw)
+    mystery(drew, c, saw)
+    mystery("a", saw, drew)
+    mystery(a, a, "drew")
+
+def mystery(b, a, c):
+    print(c + " " + a + " the " + b)
+
+main()
+----------------------------------
+If/Else Simulation
+def mystery(x, y):
+    if x > y:
+        x = x - 5
+        y = y + 5
+    if x < y:
+        x += 1
+        y -= 1
+    else:
+        x = y * 2
+    print(str(x) + " " + str(y))
+
+mystery(4, 7) # 5 6
+mystery(3, 3) # 6 3
+mystery(10, 5) # 6 9
+mystery(20, 4) # 18 9
+mystery(1, 1) # 2 1
+----------------------------
+# print_dia_numbers(input_num)
+def print_dia_numbers(input_num):
+    for row in range(input_num * 2):
+        if row < input_num:
+            print("." * (input_num - row) + str(row + 1) * (1 + row * 2))
+        else:
+            print("." * (row - input_num) + str(row-input_num) * (1 + (input_num * 2 - row) * 2))
+
+
+print_dia_numbers(9)
+-------------------------------
+
+
+
+OOP
+
+make your own data type (likes integer, boolean, float) (to animal, prants ...)
+we can define our own data type
+people have "mother, father, birth date, name, .."
+class person -> what 
+birth date -> 3 integer
+another class it uses self attribute same class
+name : string
+
+class are made by primitive type
+
+When we create new integer, -> behind seen -> python interpreter ~~~ find memory ~~~ 32 bit int memory there is initialization ~~
+
+write on the memory (binary values)
+
+class has str functions -> number5 to string???
+all integer, float has __str__ function -> to make it to string
+
+numpy is python package makes array to super useful
+
+time1 and time2 -> located in computer -> has a address
+it's now have a 3 integer
+time2 is another references in memory
+time1 is instance of the time class
+time2 is another instance of the time class
+
+instances and class of the class -> its a vocabulary
+
+any abstract ~~ we want to invent
+any kind of object is can object representive
+
+self buiseness -> what is it doing?
+here is online 3 -> 
+self.seconds = seconds -> seconds : equasion(not) -> right things to value and input left things
+
+self is first case = time1
+self is second case = time2
+
+it is idea of this instance of the class
+instance is doing the work
+
+__repr__() can define the operator
+
+add_time() is called method
+so the way ~~ functions -> input and output
+but method(add) : add time it self
+.??? called as method
+
+there is another ~~~
+first beginning programs??
+slite difference ~~~
+
+sexagesimal (number system)
+
+divmod(self.seconds, 60)
+divmod is common function
+
+-------------------------
+# Time.py
+class Time:
+
+    # initializer (constructor)
+    # __123123__ means defining initializer function
+    def __init__(self, hours, minutes, seconds):
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+
+    def __str__(self):
+        # hh:mm:ss
+        return str(self.hours) + ":" + str(self.minutes) + ":" + str(self.seconds)
+
+    def add_time(self, other):
+        self.hours += other.hours
+        self.minutes += other.minutes
+        self.seconds += other.seconds
+
+        mins_to_add, self.seconds = divmod(self.seconds, 60)
+
+    def __add__(self, other):
+        seconds = self.seconds + other.seconds
+        minutes = self.minutes + other.minutes
+        hours = self.hours + other.hours
+
+        return Time(seconds, minutes, hours)
+--------------------------
+# TimeTest.py
+from Time import Time
+
+time1 = Time(32, 16, 11)
+time2 = Time(42, 18, 11)
+time3 = Time(time2, 22, 3, 1)
+print(time1)
+print(time2)
+
+time1 = Time(32, 16, 11)
+time2 = Time(42, 18, 109)
+
+print(time1)
+time1.add_time(time2)
+print(time2)
+print(time1)
+----------------------
