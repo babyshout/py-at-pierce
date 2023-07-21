@@ -2,7 +2,7 @@ from print_board import *
 
 
 def main():
-    board_size: int = 9  # input("input board size")
+    board_size: int = 19  # input("input board size")
     # board = [board_size][board_size]
     # board = []
     # for _ in range(board_size):
@@ -11,16 +11,29 @@ def main():
     board = [["." for _ in range(board_size)] for _ in range(board_size)]
 
     # make this thing to init_board() function
-    for row in range(9):
-        for col in range(9):
-            if row == 2 and col == 2:
+    for row in range(board_size):
+        for col in range(board_size):
+            if row == 3 and col == 3:
                 board[row][col] = "*"
-            elif row == board_size - 3 and col == 2:
+            elif row == 3 and col == 9:
                 board[row][col] = "*"
-            elif row == 2 and col == board_size - 3:
+            elif row == 3 and col == board_size - 4:
                 board[row][col] = "*"
-            elif row == board_size - 3 and col == board_size - 3:
+
+            if row == 9 and col == 3:
                 board[row][col] = "*"
+            elif row == 9 and col == 9:
+                board[row][col] = "*"
+            elif row == 9 and col == board_size - 4:
+                board[row][col] = "*"
+
+            elif row == board_size - 4 and col == 3:
+                board[row][col] = "*"
+            elif row == board_size - 4 and col == 9:
+                board[row][col] = "*"
+            elif row == board_size - 4 and col == board_size - 4:
+                board[row][col] = "*"
+
             # else:
             # board[row][col] = "."
 
@@ -40,8 +53,8 @@ def main():
         is_valid_move = False
         while not is_valid_move:
             try:
-                move_y = int(input(f"player({player}), plz choose your move(x)")) - 1
-                move_x = int(input(f"player({player}), plz choose your move(y)")) - 1
+                move_y = int(input(f"player({player}), plz choose your move(AXIS x)")) - 1
+                move_x = int(input(f"player({player}), plz choose your move(AXIS y)")) - 1
 
                 if board[move_x][move_y] == player or board[move_x][move_y] == opponent:
                     is_valid_move = False
@@ -93,8 +106,9 @@ def main():
                 is_win = True
 
         if is_win:
-            break
+            print_board(board, board_size)
             print(f"{player}, you win!")
+            break
 
         # if player(X or O) win, print winning comment and break the whole loop
 
